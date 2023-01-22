@@ -22,7 +22,9 @@ const Home = () => {
     const fetchPosts = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch("http://localhost:9000/api/v1/post");
+        const response = await fetch(
+          "https://pixel-rave.onrender.com/api/v1/post"
+        );
         if (response.ok) {
           const result = await response.json();
           setAllPosts(result.data.reverse());
