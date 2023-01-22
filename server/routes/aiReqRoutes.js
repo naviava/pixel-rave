@@ -12,6 +12,10 @@ const config = new Configuration({
 
 const openAi = new OpenAIApi(config);
 
+router.route("/").get(() => {
+  res.send("Hello from AI!");
+});
+
 router.route("/").post(async (req, res) => {
   try {
     const { prompt } = req.body;
