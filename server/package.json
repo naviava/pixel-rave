@@ -1,0 +1,21 @@
+{
+  "name": "pixelrave-app",
+  "version": "1.0.0",
+  "description": "Creates AI generated art based on user prompts.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cloudinary": "^1.33.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.4",
+    "openai": "^3.1.0"
+  }
+}

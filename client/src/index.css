@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+@media screen and (min-width: 480px) {
+  .card:nth-child(7n + 1) {
+    grid-column: auto/span 2;
+    grid-row: auto/span 2;
+  }
+}
+
+.prompt::-webkit-scrollbar {
+  width: 5px;
+}
+
+.prompt::-webkit-scrollbar-thumb {
+  background-color: #666e75;
+  border-radius: 5px;
+}
+
+/* @tailwind base;, @tailwind components;, @tailwind utilities; are imports of different parts of the Tailwind CSS framework.
+@tailwind base; imports the basic styling, @tailwind components; imports pre-defined components, and @tailwind utilities; imports utility classes.
+
+* { font-family: "Inter", sans-serif; } is a CSS rule that sets the default font family for all elements to "Inter", which is a web font,
+and if the web font is not available it will fall back to the default sans-serif font.
+
+@media screen and (min-width: 480px) { ... } is a media query that applies the styles within the curly braces only when the viewport width is
+at least 480px.
+
+.card:nth-child(7n + 1) { ... } is a CSS rule that targets the first, eighth, fifteenth, etc. elements with the class card. It applies the
+styles within the curly braces to those elements.
+
+grid-column: auto/span 2; and grid-row: auto/span 2; are CSS grid properties that are used to control the size and position of grid items.
+grid-column: auto/span 2; means that the element will take up 2 columns starting from the next available column. grid-row: auto/span 2;
+means that the element will take up 2 rows starting from the next available row.
+
+.prompt::-webkit-scrollbar { width: 5px; } and .prompt::-webkit-scrollbar-thumb { background-color: #666e75; border-radius: 5px; }are CSS styles
+for customizing */
