@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import classes from "./Home.module.css";
 import { preview } from "../assets";
 import { getRandomPrompt } from "../utils";
 import { FormField, Loader } from "../components";
@@ -80,7 +81,7 @@ const CreatePost = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto">
+    <section className={`max-w-7xl mx-auto ${classes["home-intro"]}`}>
       <div>
         <h1 className="font-extrabold text-[#222328] text-[32px]">
           Let's get going, shall we...
@@ -90,7 +91,7 @@ const CreatePost = () => {
           online community.
         </p>
       </div>
-      <form className="mt-16 max-w3xl" onSubmit={handleSubmit}>
+      <form className="mt-8 max-w3xl" onSubmit={handleSubmit}>
         <div className="flex flex-col gap-5">
           <FormField
             labelName="Your Name"

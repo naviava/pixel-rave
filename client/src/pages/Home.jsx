@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+import classes from "./Home.module.css";
 import { Loader, Card, FormField } from "../components";
 
 const RenderCards = ({ data, title }) => {
@@ -55,7 +56,7 @@ const Home = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto">
+    <section className={`max-w-7xl mx-auto ${classes["home-intro"]}`}>
       <div>
         <h1 className="font-extrabold text-[#222328] text-[32px]">
           What others are upto...
@@ -65,7 +66,7 @@ const Home = () => {
           creativity and visual appeal.
         </p>
       </div>
-      <div className="mt-16">
+      <div className="mt-8">
         <FormField
           labelName="Search posts"
           type="text"
